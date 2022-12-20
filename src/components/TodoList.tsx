@@ -71,7 +71,7 @@ const TodoList: React.FC<Props> = ({ todos, setTodos,completedTodos, setcomplete
       </Droppable>
 
       
-    
+{/*     
       <div className='todosremove'>
       <span className='todos__heading'>
           Completed Tasks
@@ -83,10 +83,10 @@ const TodoList: React.FC<Props> = ({ todos, setTodos,completedTodos, setcomplete
                 key={todo.id}
                 setTodos={setTodos}
               />
-            ))}
+            ))} */}
 
 
-      </div>
+     
     </div>
 
   )
