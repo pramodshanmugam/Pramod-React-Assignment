@@ -16,6 +16,7 @@
 .search__box{
     position: relative;
     right: 230px;
+    top:18px;
 }
 
 .input{
@@ -97,4 +98,16 @@
 .remove {
     left:20px;
     background-color: orangered;
+}
+
+.notification{
+  position: relative;
+  top: 0px;
+  right: -20px;
+}
+
+.user{
+  right: -105px;
+    top: -17px;
+    position: relative;
 }
