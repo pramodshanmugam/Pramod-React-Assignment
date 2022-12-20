@@ -12,7 +12,7 @@ interface Props{
 const TodoList: React.FC<Props> = ({ todos, setTodos,completedTodos, setcompletedTodos}) => {
   return (
     <div className='container'>
-      <Droppable droppableId='TodosList'>
+      <Droppable droppableId='TodoList'>
       {
         (provided)=>(
           <div className='todos' ref={provided.innerRef}
@@ -21,14 +21,17 @@ const TodoList: React.FC<Props> = ({ todos, setTodos,completedTodos, setcomplete
         <span className='todos__heading'>
           Active Tasks
         </span>
-        {todos.map((todo) => (
+        {todos.map((todo,index) => (
               <SingleTodo
+                index={index}
                 todos={todos}
                 todo={todo}
                 key={todo.id}
                 setTodos={setTodos}
               />
             ))}
+
+            {provided.placeholder}
       </div>
 
 
@@ -38,7 +41,7 @@ const TodoList: React.FC<Props> = ({ todos, setTodos,completedTodos, setcomplete
       
       </Droppable>
 
-      <Droppable droppableId='TodosRemove'>
+      <Droppable droppableId='TodoRemove'>
         {
           (provided) => (
           <div className='todos remove' 
@@ -50,13 +53,14 @@ const TodoList: React.FC<Props> = ({ todos, setTodos,completedTodos, setcomplete
         </span>
       {completedTodos.map((todo,index) => (
               <SingleTodo
-              
+                index={index}
                 todos={completedTodos}
                 todo={todo}
                 key={todo.id}
                 setTodos={setcompletedTodos}
               />
             ))}
+            {provided.placeholder}
 
 
       </div>

@@ -5,7 +5,7 @@ import './App.css';
 import InputField from './components/InputField';
 import { Todo } from './components/model';
 import TodoList from './components/TodoList';
-import { DragDropContext } from 'react-beautiful-dnd'
+import { DragDropContext, DropResult } from 'react-beautiful-dnd'
 
 const App: React.FC =() =>{
 
@@ -19,6 +19,10 @@ const App: React.FC =() =>{
     }
 
   };
+
+  const onDragEnd=(result:DropResult) =>{
+    console.log(result);
+  }
   return(
     <>
      <Navbar />
