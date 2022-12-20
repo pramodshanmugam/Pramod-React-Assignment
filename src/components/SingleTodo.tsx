@@ -11,24 +11,14 @@ type Props={
 
 const SingleTodo = ({index,todo,todos,setTodos}:Props) => {
   return (      
-        <Draggable draggableId={todo.id.toString()} index{index}>
-
-            {   
-                (provided)=>(
-
-                    {...provided.draggableProps}
-                    ref={provided.innerRef}
+        
                     <form className='todos__single'>
                     <span className='todos__single--text>'>{todo.todo}</span>
                     </form>
 
 
 
-                )
-            }
-        
-         </Draggable>
-
+      
 
 
 
@@ -38,8 +28,5 @@ const SingleTodo = ({index,todo,todos,setTodos}:Props) => {
     
     }
     
-  )
-  
-}
 
 export default SingleTodo
