@@ -165,3 +165,26 @@
   color: azure;
   text-decoration: none;
 }
+
+.createform {
+  display: table-caption;
+  position: relative;
+  column-count: 2;
+  grid-template-columns: auto 2fr;
+  row-gap: 49px;
+  column-gap: 200px;
+  top:40px;
+  align-items: center;
+  left: 211px;
+  padding: 10px;
+}
+.textbox{
+  position: relative;
+  width: 320px;
+  color: black;
+}
+.textbox1{
+  position: relative;
+  width: 620px;
+  color: black;
+}

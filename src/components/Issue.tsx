@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import  "./style.css";
+import "./style.css";
 // import '/react/assign1/src/App.css';
 import InputField from './InputField';
 import { Todo } from './model';
