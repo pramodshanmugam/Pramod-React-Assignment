@@ -1,84 +1,40 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-
 import './App.css';
-import InputField from './components/InputField';
-import { Todo } from './components/model';
-import TodoList from './components/TodoList';
-import { DragDropContext, DropResult } from 'react-beautiful-dnd'
+import Sidenav from './components/Sidenav';
+import Issue from './components/Issue';
+import { BrowserRouter, BrowserRouter as Router, Route,Routes } from "react-router-dom"
+import {RoutePath,routes,} from "./routs"
+import Layout from './Layout/Layout';
 
-const App: React.FC =() =>{
 
-  const [todo, setTodo] = useState<string>("");
-  const [todos, setTodos] = useState<Todo[]>([]);
-  const [completedTodos, setcompletedTodos] = useState<Todo[]>([])
-  const handleAdd = (e :React.FormEvent) =>{ e.preventDefault();
-    if(todo){
-      setTodos([...todos,{id:Date.now(),todo:todo,isDone:false}]);
-      setTodo("");
-    }
+export default function App () {
 
-  };
-
-  const onDragEnd = (result: DropResult) => {
-    const { destination, source } = result;
-
-    console.log(result);
-
-    if (!destination) {
-      return;
-    }
-
-    if (
-      destination.droppableId === source.droppableId &&
-      destination.index === source.index
-    ) {
-      return;
-    }
-
-    let add;
-    let active = todos;
-    let complete = completedTodos;
-    // Source Logic
-    if (source.droppableId === "TodosList") {
-      add = active[source.index];
-      active.splice(source.index, 1);
-    } else {
-      add = complete[source.index];
-      complete.splice(source.index, 1);
-    }
-
-    // Destination Logic
-    if (destination.droppableId === "TodosList") {
-      active.splice(destination.index, 0, add);
-    } else {
-      complete.splice(destination.index, 0, add);
-    }
-
-    setcompletedTodos(complete);
-    setTodos(active);
-
-  };
   return(
-    <>
-     <Navbar />
-     <DragDropContext onDragEnd={()=>{}}>
-     <div className='App'>
-      <span className='heading'>Tracker</span>
-      <InputField  todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-      <TodoList todos={todos} setTodos={setTodos} 
-      completedTodos={completedTodos} setcompletedTodos={setcompletedTodos}
+    <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<Layout/>}>
+      {routes.map((route)=> (
+      
+      
+      <Route 
+      
+      index={RoutePath.HOME===route.path}
+      path={route.path}
+      element={<route.component/>}
+      key={route.name}  
+        
       />
-     </div>
+
+      ))};
+      </Route>
+      </Routes> 
+         
+     
+    </BrowserRouter>
 
 
 
-     </DragDropContext>
-     
-     
-     </>
-     
   )
-}
 
-export default App;
+}

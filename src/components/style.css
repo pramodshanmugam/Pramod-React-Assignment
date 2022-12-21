@@ -7,6 +7,20 @@
     justify-content: space-between;
     padding: 0 40px;
 }
+
+.Sidenav{
+  width:10%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  background-color: rgb(2, 2, 37);
+
+}
+.Isuue{
+  position: relative;
+  background-color: black;
+  margin-left: 2;
+}
 .headingnav{
     position: relative;
     left: -740px;
@@ -38,6 +52,7 @@
 }
 .container {
     width: 95%;
+    height: 100%;
     display: flex;
     margin-top: 10px;
     justify-content: space-between;
@@ -51,7 +66,8 @@
     flex-direction: column;
     width: 47.5%;
     padding: 15px;
-    background-color: rgb(50, 195, 205);
+    background-color: rgb(213, 240, 241);
+    position: relative;
   }
   
 
@@ -97,7 +113,7 @@
     
 .remove {
     left:20px;
-    background-color: orangered;
+    background-color: rgb(247, 227, 220);
 }
 
 .notification{
@@ -110,4 +126,9 @@
   right: -105px;
     top: -17px;
     position: relative;
+}
+
+.Isuue{
+  position: relative;
+  background-color: black;
 }
