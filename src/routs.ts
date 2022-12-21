@@ -40,19 +40,19 @@ export const routes:Route[] =[
         name:"home",
         path:RoutePath.HOME,
         component:Home,
-        SidebarNavItems:defaultSidebarNavItems
+        sidebarNavItems:defaultSidebarNavItems
     },
     {
         name:"Issue",
         path:RoutePath.ISSUE,
         component:Issue,
-        SidebarNavItems:defaultSidebarNavItems
+        sidebarNavItems:defaultSidebarNavItems
     },
     {
         name:"Create",
         path:RoutePath.CREATE,
         component:Create,
-        SidebarNavItems:defaultSidebarNavItems
+        sidebarNavItems:defaultSidebarNavItems
 
     }
 ]

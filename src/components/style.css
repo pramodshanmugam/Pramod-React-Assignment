@@ -1,5 +1,5 @@
 .Navbar{
-    width: 1;
+    width: 358%;
     height: 60px;
     border-bottom: 1px solid #555;
     display: flex;
@@ -9,6 +9,7 @@
 }
 
 .Sidenav{
+  margin-top: 60px;
   width:10%;
   height: 100%;
   position: fixed;
@@ -19,7 +20,7 @@
 .Isuue{
   position: relative;
   background-color: black;
-  margin-left: 2;
+  margin-left: 0;
 }
 .headingnav{
     position: relative;
@@ -131,4 +132,36 @@
 .Isuue{
   position: relative;
   background-color: black;
+}
+
+.Dashboard{
+  margin-top: 10px;
+  position: relative;
+  align-items: center;
+  border:1px;
+  border:white;
+}
+
+.Issue{
+  top:2%;
+  position: relative;
+  align-items: center;
+}
+
+.Create{
+  top:4%;
+  position:relative;
+  align-items: center;
+}
+.nav-link1{
+  color: azure;
+  text-decoration: none;
+}
+.nav-link2{
+  color: azure;
+  text-decoration: none;
+}
+.nav-link3{
+  color: azure;
+  text-decoration: none;
 }

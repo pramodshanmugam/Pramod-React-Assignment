@@ -1,13 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./style.css";
 
 const sidenav = () => {
   return (
     <nav className='Sidenav'>
-     <div className='button1'><button>Dashboard</button></div>
-     <div className='button2'><button>Issues</button></div><br/>
-     <div className='button3'><button>Create</button></div><br/>
+     <ul>
+     <li className='Dashboard'>
+      <Link className='nav-link1' to={"/Home"}>Dashboard </Link> 
+      </li> 
+     <li className='Issue'> 
+     <Link className='nav-link2' to ={"/Issue"}>Issue</Link>
+     </li>
+     <li className='Create'> 
+     <Link className='nav-link3' to ={"/Create"}>Create</Link>
+     </li>
+     </ul>
      </nav>
+
+
+
+    
   )
 }
 

@@ -1,13 +1,17 @@
 import * as S from './Layout.styles';
 import {Outlet} from "react-router-dom";
-import Sidebar from './Sidebar';
-
+import Sidenav from '../components/Sidenav';
+import Navbar from './Navbar';
+import './style.css';
 const Layout = () =>(
-
+    
     <S.Layout>
-        <Sidebar/>
+         <Sidenav/>
+         <Navbar/>
         <S.Body>
             <Outlet/>
+            
+           
 
         </S.Body>
 

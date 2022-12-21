@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
-import Sidenav from './components/Sidenav';
 import Issue from './components/Issue';
 import { BrowserRouter, BrowserRouter as Router, Route,Routes } from "react-router-dom"
 import {RoutePath,routes,} from "./routs"
-import Layout from './Layout/Layout';
+import Layout from './components/Layout';
 
 
 export default function App () {

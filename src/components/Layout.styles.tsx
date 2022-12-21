@@ -10,7 +10,8 @@ grid-template-columns: auto 1fr;
 
 export const Body =styled.div`
     grid-area:body;
-    margin-left:8px;
+    margin-left:-23%;
+    margin-top:61px;
 
 
 `;
