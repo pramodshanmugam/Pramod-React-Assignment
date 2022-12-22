@@ -81,11 +81,26 @@ function Create(){
 
             <div>
                 <label htmlFor="Status">Status</label>
-                <input className='textbox'id="Status" type="text" {...register("Status")}/>
+                <input className='textbox' list="Status" {...register("Status")}/>
+                <datalist id="Status">
+                        <option value="TODO"/>
+                        <option value="DOING"/>
+                        <option value="DONE"/>                        
+                </datalist>
             </div>
             <div>
                 <label htmlFor="Priority">Priority</label>
-                <input className='textbox'id="Priority"  type="text" {...register("Priority")}/>
+                <input className='textbox'list="Priority" {...register("Priority")}/>
+                <datalist id="Priority">
+                        <option value="SHOWSTOPPER"/>
+                        <option value="HIGH"/>
+                        <option value="MEDIUM"/>
+                        <option value="LOW"/>
+                        <option value="VERY LOW"/>
+                        
+                </datalist>
+
+
             </div>
             <div>
                 <label htmlFor="Resolution">Resolution</label>
