@@ -23,6 +23,8 @@ const SingleTodo = ({index,todo,todos,setTodos}:Props) => {
                             ref={provided.innerRef}
                         >
                     <span className='todos__single--text>'>{todo.todo}</span>
+                    <span className='todos__single--text>'>{todo.todo}</span>
+                    <span className='todos__single--text>'>{todo.todo}</span>
                     </form>
 
                     )
